@@ -1,0 +1,36 @@
+{
+  "name": "dsh-read-position",
+  "version": "0.1.0",
+  "description": "Remember the scroll position of DSH's built-in file preview per file, so switching workspaces (or sessions) does not throw you back to the top.",
+  "type": "module",
+  "license": "MIT",
+  "author": "local",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "scroll",
+    "reading-position"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

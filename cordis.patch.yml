@@ -1,0 +1,8 @@
+# dsh-read-position —— 记住文件预览的阅读位置
+#
+# 宿主侧只插入一个空壳行，实际逻辑全在 client.js：
+# 监听 [data-textpreview-body] 的滚动，把位置按文件路径写进 localStorage，
+# 并在预览重新出现时写回去。
+- insert:
+    - id: read-position
+      name: dsh-read-position
